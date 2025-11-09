@@ -1,0 +1,8 @@
+{
+  "name": "SharpLearn: Your AI Study Companion",
+  "description": "An intelligent assistant that listens to your classes, takes smart notes, tracks your focus with facial expression analysis, and helps you learn more effectively in real-time.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

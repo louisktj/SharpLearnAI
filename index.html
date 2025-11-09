@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SharpLearn: AI Study Companion</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.3.0"
+  }
+}
+</script>
+<style>
+    /* Custom Scrollbar Styles */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1f2937; /* bg-gray-800 */
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: #374151; /* bg-gray-700 */
+      border-radius: 10px;
+      border: 3px solid #1f2937;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #4b5563; /* bg-gray-600 */
+    }
+
+    /* Custom Prose Styles for "Pedagogical Magazine" Feel */
+    .summary-content h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #22d3ee; /* cyan-400 */
+      margin-bottom: 0.5rem;
+    }
+    .summary-content .subtitle {
+      font-size: 1.25rem;
+      color: #d1d5db; /* gray-300 */
+      font-style: italic;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #374151; /* gray-700 */
+      padding-bottom: 1.5rem;
+    }
+    .summary-content h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #0891b2; /* cyan-600 */
+      border-bottom: 1px solid #0e7490; /* cyan-700 */
+      padding-bottom: 0.5rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .summary-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #06b6d4; /* cyan-500 */
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .summary-content blockquote {
+      border-left-width: 4px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+    }
+    .summary-content blockquote.definition {
+      background-color: rgba(14, 165, 233, 0.1); /* bg-sky-500/10 */
+      border-color: #0ea5e9; /* sky-500 */
+      color: #e0f2fe; /* sky-100 */
+    }
+    .summary-content blockquote.remember {
+      background-color: rgba(245, 158, 11, 0.1); /* bg-amber-500/10 */
+      border-color: #f59e0b; /* amber-500 */
+      color: #fef3c7; /* amber-100 */
+    }
+    .summary-content blockquote.remember h2 {
+        border-bottom: none;
+        color: #fcd34d; /* amber-300 */
+        font-size: 1.25rem;
+        margin-top: 0;
+    }
+    .summary-content strong { 
+        color: #67e8f9; /* cyan-300 */
+        font-weight: 600;
+    }
+    .summary-content ul {
+        list-style-type: disc;
+        list-style-position: outside;
+        margin-left: 1.25rem;
+        padding-left: 0.5rem;
+    }
+    .summary-content ul li {
+        margin-bottom: 0.5rem;
+    }
+    .summary-content li::marker {
+        color: #22d3ee; /* cyan-400 */
+    }
+    .summary-content p, .summary-content li {
+        line-height: 1.75;
+        color: #d1d5db; /* gray-300 */
+    }
+    .summary-content em {
+        background-color: rgba(55, 65, 81, 0.5); /* bg-gray-700/50 */
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.25rem;
+        font-style: normal;
+    }
+
+    /* Modal Animation */
+    .animate-modal-enter {
+        animation: fadeIn 0.3s ease-out;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; transform: scale(0.95); }
+        to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-900 text-white font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
