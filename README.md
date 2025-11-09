@@ -34,9 +34,8 @@
   - **Quick Record**: SharpLearn suggests a **relevant course name** based on live content.
 
 ## 🧭 Demo
-
-> _Add a GIF or short video here (e.g., `/assets/demo.gif`)._
-
+<img width="1151" height="624" alt="Screenshot 2025-11-09 at 10 47 10 AM" src="https://github.com/user-attachments/assets/dac12d81-138a-4a74-b6ab-0ed8c4bd393f" />
+<img width="1201" height="675" alt="Screenshot 2025-11-09 at 10 47 22 AM" src="https://github.com/user-attachments/assets/b927e804-da69-4255-b1d7-d6c03a42c412" />
 
 ### Core Endpoints (example)
 - `POST /transcribe` → ingest/stream audio chunks → partial + final transcripts
