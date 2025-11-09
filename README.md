@@ -37,17 +37,6 @@
 
 > _Add a GIF or short video here (e.g., `/assets/demo.gif`)._
 
-## 🧱 Architecture (Monorepo)
-
-```
-sharplearn/
-├─ apps/
-│  ├─ web/          # React/TypeScript web app (camera + mic, UI, charts, PDF)
-│  └─ api/          # Backend (Node.js or FastAPI) exposing REST endpoints
-├─ packages/
-│  └─ ui/           # Shared UI components (optional)
-└─ README.md
-```
 
 ### Core Endpoints (example)
 - `POST /transcribe` → ingest/stream audio chunks → partial + final transcripts
